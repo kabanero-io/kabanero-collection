@@ -1,0 +1,21 @@
+# An example repository index. 
+apiVersion: v1
+generated: 2019-07-01T20:00:00+00:00
+projects: 
+  java-microprofile:
+  - created: 2019-06-24T21:00:00+00:00
+    description: Microprofile using AdoptOpenJDK and Maven
+    icon: https://
+    keywords:
+    - Java
+    - Microprofile
+    - Maven
+    - Open Liberty
+    name: java-microprofile
+    maintainers:
+    - neeraj.laad@gmail.com
+    urls:
+    - https://github.com/appsody/stacks/releases/download/java-microprofile-v0.2.1/incubator.java-microprofile.templates.default.tar.gz
+    collectionUrls: 
+    - https://raw.githubusercontent.com/kabanero-io/kabanero-collection/master/experimental/java-microprofile-0.2.1
+    version: 0.2.1

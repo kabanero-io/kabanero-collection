@@ -1,0 +1,41 @@
+apiVersion: v1
+name: java-microprofile
+version: 0.2.1
+description: 
+icon: https://microprofile.io/wp-content/uploads/2018/06/MP-logo-w-tagline.png
+keywords:
+- Java
+- Microprofile
+assets:
+- name: stack
+  type: appsody-stack
+  url: https://github.com/appsody/stacks/releases/download/java-microprofile-v0.2.1/incubator.java-microprofile.templates.default.tar.gz
+  digest: c043777f921203f4e03c1dc5089ba9d26d9f353b0df2b239b956200aab5205d6
+- name: 
+  type: kubernetes-resource
+  url: https://raw.githubusercontent.com/kabanero-io/kabanero-collection/master/experimental/java-microprofile-0.2.1/appsody-build-pipeline.yaml
+  digest: b6ab63238d4c801d5c602676cdcec9288cdba965c253ccd875b951762f2e7605
+- name: 
+  type: kubernetes-resource
+  url: https://raw.githubusercontent.com/kabanero-io/kabanero-collection/master/experimental/java-microprofile-0.2.1/appsody-build-task.yaml
+  digest: 11b41c568e7936435f84126169241702417988a7ea65160cf0588dca5430382d
+- name: 
+  type: kubernetes-resource
+  url: https://raw.githubusercontent.com/kabanero-io/kabanero-collection/master/experimental/java-microprofile-0.2.1/appsody-cluster-role-binding.yaml
+  digest: aebee37da3381724cd6de116f5d4e2a1e200831d64328e3085caed48a92894eb
+- name: 
+  type: kubernetes-resource
+  url: https://raw.githubusercontent.com/kabanero-io/kabanero-collection/master/experimental/java-microprofile-0.2.1/appsody-pipeline-resources.yaml
+  digest: dc1f7ead5359ee3e15ebc33cfd11ab1c7a56a0bcf93c3265e36e53f6983eeae3
+- name: 
+  type: kubernetes-resource
+  url: https://raw.githubusercontent.com/kabanero-io/kabanero-collection/master/experimental/java-microprofile-0.2.1/appsody-pipeline-resources.yaml
+  digest: dc1f7ead5359ee3e15ebc33cfd11ab1c7a56a0bcf93c3265e36e53f6983eeae3
+- name: 
+  type: kubernetes-resource
+  url: https://raw.githubusercontent.com/kabanero-io/kabanero-collection/master/experimental/java-microprofile-0.2.1/appsody-pipeline-run.yaml
+  digest: efe4b035c3061055018a93976505c67fd048c365026ab4544a432dd662a306cb
+- name: 
+  type: kubernetes-resource
+  url: https://raw.githubusercontent.com/kabanero-io/kabanero-collection/master/experimental/java-microprofile-0.2.1/appsody-service-account.yaml
+  digest: e39d71b3ceb6d94443e9e0257871e8dd1f4310f5f1227e5b3210f866270f0d6f
