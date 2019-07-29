@@ -18,8 +18,8 @@ spec:
       - name: docker-image
         type: image
   steps:
-    - name: assemble-extract-step
-      image: chilantim/appsody-docker
+    - name: assemble-extract-stepn      securityContext:n        privileged: true
+      image: appsody/appsody-docker
       command: ["/bin/bash"]
       args:
         - -c
@@ -27,18 +27,18 @@ spec:
       volumeMounts:
         - name: docker-socket
           mountPath: /var/run/docker.sock
-    - name: build-push-step
+    - name: build-push-stepn      env:n      - name: DOCKER_CONFIGn        value: /builder/home/.docker
       image: gcr.io/kaniko-project/executor
       command:
         - /kaniko/executor
       args:
         - --dockerfile=${inputs.params.pathToDockerFile}
         - --destination=${outputs.resources.docker-image.url}
-        - --context=${inputs.params.pathToContext}
+        - --context=${inputs.params.pathToContext}n        - --skip-tls-verify
     - name: modify-yaml
       image: ubuntu
       command: ['/bin/bash']
-      args: ['-c', 'find /workspace/extracted -name ${YAMLFILE} -type f -exec sed -i -e s!"image: .*$"!"image: ${IMG}"!g {} \;']
+      args: ['-c', 'find /workspace/appsody-source -name ${YAMLFILE} -type f -exec sed -i -e s!"image: .*$"!"image: ${IMG}"!g {} \;']
       env:
         - name: IMG
           value: ${outputs.resources.docker-image.url}
@@ -47,7 +47,7 @@ spec:
     - name: install-knative
       image: lachlanevenson/k8s-kubectl
       command: ['/bin/sh']
-      args: ['-c', 'find /workspace/extracted -name ${YAMLFILE} -type f|xargs kubectl apply -f']
+      args: ['-c', 'find /workspace/appsody-source -name ${YAMLFILE} -type f|xargs kubectl apply -f']
       env:
         - name: YAMLFILE
           value: ${inputs.params.appsody-deploy-file-name}
