@@ -18,7 +18,9 @@ spec:
       - name: docker-image
         type: image
   steps:
-    - name: assemble-extract-stepn      securityContext:n        privileged: true
+    - name: assemble-extract-step
+      securityContext:
+        privileged: true
       image: appsody/appsody-docker
       command: ["/bin/bash"]
       args:
@@ -27,14 +29,18 @@ spec:
       volumeMounts:
         - name: docker-socket
           mountPath: /var/run/docker.sock
-    - name: build-push-stepn      env:n      - name: DOCKER_CONFIGn        value: /builder/home/.docker
+    - name: build-push-step
+      env:
+      - name: DOCKER_CONFIG
+        value: /builder/home/.docker
       image: gcr.io/kaniko-project/executor
       command:
         - /kaniko/executor
       args:
         - --dockerfile=${inputs.params.pathToDockerFile}
         - --destination=${outputs.resources.docker-image.url}
-        - --context=${inputs.params.pathToContext}n        - --skip-tls-verify
+        - --context=${inputs.params.pathToContext}
+        - --skip-tls-verify
     - name: modify-yaml
       image: ubuntu
       command: ['/bin/bash']
