@@ -2,7 +2,7 @@
 
 The collection manifest describes the assets and remote repositories which are part of a representative collection. A collection is versioned. 
 
-For an example see [examples/java-microprofile-1.0.0/collection.yaml](examples/java-microprofile-1.0.0/collection.yaml)
+For an example see [experimental/java-microprofile-0.2.1/collection.yaml](experimental/java-microprofile-0.2.1/collection.yaml)
 
 ### Manifest Contents
 
