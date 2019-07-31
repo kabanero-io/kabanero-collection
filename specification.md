@@ -33,7 +33,7 @@ A collection manifest and a copy of any of the required assets can be assembled 
 
 # Repository
 
-collections may be served from a collection Repository. A collection repository includes an index which references all the available collections. See [examples/index.yaml](examples/index.yaml)
+collections may be served from a collection Repository. A collection repository includes an index which references all the available collections. See [experimental/index.yaml](experimental/index.yaml)
 
 A collection repository may include: 
 * A git repository
