@@ -5,7 +5,7 @@ metadata:
 spec:
   inputs:
     resources:
-      - name: appsody-source
+      - name: git-source
         type: git
     params:
       - name: pathToDockerFile
