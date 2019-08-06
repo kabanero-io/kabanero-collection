@@ -1,6 +1,8 @@
 # An example repository index. 
 apiVersion: v1
 generated: 2019-07-01T20:00:00+00:00
+featuredProjects:
+- java-microprofile
 projects: 
   java-microprofile:
   - created: 2019-06-24T21:00:00+00:00
